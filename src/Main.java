@@ -14,16 +14,17 @@ public class Main {
         miPelicula.evalua(9);
         miPelicula.evalua(10);
         miPelicula.evalua(9);
-        System.out.println(miPelicula.sumaDeLasEvaluaciones);
-        System.out.println(miPelicula.numeroDeEvaluaciones);
+        System.out.println(miPelicula.getSumaDeLasEvaluaciones());
+        System.out.println(miPelicula.getNumeroDeEvaluaciones());
         System.out.println(miPelicula.calculaMedia());
 
         otraPelicula.muestraFichaTecnica();
-        miPelicula.evalua(9);
-        miPelicula.evalua(10);
-        miPelicula.evalua(9);
-        System.out.println(miPelicula.sumaDeLasEvaluaciones);
-        System.out.println(miPelicula.numeroDeEvaluaciones);
-        System.out.println(miPelicula.calculaMedia());
+        otraPelicula.evalua(8);
+        otraPelicula.evalua(10);
+        otraPelicula.evalua(9);
+        otraPelicula.evalua(10);
+        System.out.println(otraPelicula.getSumaDeLasEvaluaciones());
+        System.out.println(otraPelicula.getNumeroDeEvaluaciones());
+        System.out.println(otraPelicula.calculaMedia());
     }
 }
