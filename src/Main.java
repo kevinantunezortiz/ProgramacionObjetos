@@ -1,30 +1,28 @@
+import com.aluracursos.screenmatch.modelos.Pelicula;
+import com.aluracursos.screenmatch.modelos.Serie;
+
 public class Main {
     public static void main(String[] args) {
         Pelicula miPelicula = new Pelicula();
-        miPelicula.nombre = "Encanto";
-        miPelicula.fechaDeLanzamiento=2021;
-        miPelicula.duracionEnMinutos=120;
-        miPelicula.incluidoEnElPlan=true;
-
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.nombre="Matrix";
-        otraPelicula.fechaDeLanzamiento=1999;
-        otraPelicula.duracionEnMinutos = 180;
-        miPelicula.muestraFichaTecnica();
-        miPelicula.evalua(9);
+        miPelicula.setNombre("Encanto");
+        miPelicula.setFechaDeLanzamiento(2021);
+        miPelicula.setDuracionEnMinutos(120);
+        miPelicula.setIncluidoEnElPlan(true);
         miPelicula.evalua(10);
-        miPelicula.evalua(9);
+        miPelicula.evalua(10);
+        miPelicula.evalua(7.8);
+        miPelicula.muestraFichaTecnica();
         System.out.println(miPelicula.getSumaDeLasEvaluaciones());
         System.out.println(miPelicula.getNumeroDeEvaluaciones());
         System.out.println(miPelicula.calculaMedia());
 
-        otraPelicula.muestraFichaTecnica();
-        otraPelicula.evalua(8);
-        otraPelicula.evalua(10);
-        otraPelicula.evalua(9);
-        otraPelicula.evalua(10);
-        System.out.println(otraPelicula.getSumaDeLasEvaluaciones());
-        System.out.println(otraPelicula.getNumeroDeEvaluaciones());
-        System.out.println(otraPelicula.calculaMedia());
+        Serie casaDragon = new Serie();
+        casaDragon.setNombre("La Casa del Dragon");
+        casaDragon.setFechaDeLanzamiento(2022);
+        casaDragon.setTemporadas(2);
+        casaDragon.setMinutosPorEpisodio(50);
+        casaDragon.setEpisodiosPorTemporada(10);
+        casaDragon.muestraFichaTecnica();
+        System.out.println(casaDragon.getDuracionEnMinutos());
     }
 }
