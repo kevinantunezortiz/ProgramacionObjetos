@@ -1,4 +1,6 @@
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
+import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
+import com.aluracursos.screenmatch.modelos.Episodio;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 
@@ -36,5 +38,17 @@ public class Main {
         calculadoraDeTiempo.incluye(casaDragon);
         calculadoraDeTiempo.incluye(otraPelicula);
         System.out.println(calculadoraDeTiempo.getTiempoTotal());
+
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+        filtroRecomendacion.filtro(miPelicula);
+
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombre("La casa Targeryen");
+        episodio.setSerie(casaDragon);
+        episodio.setTotalVisualizaciones(300);
+        System.out.println(episodio.getClasificacion());
+        filtroRecomendacion.filtro(episodio);
     }
 }
