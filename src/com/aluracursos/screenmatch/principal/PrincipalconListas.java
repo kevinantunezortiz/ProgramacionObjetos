@@ -14,23 +14,29 @@ public class PrincipalconListas {
         var encanto = new Pelicula("Encanto",2021);
         var lost = new Serie("Lost",2000);
         var casaDragon = new Serie("La Casa del Dragon",2022);
+        var otra = new Pelicula("John Wick", 2014);
+        otra.evalua(9);
+
+        Serie serie = new Serie("La Casa de Papel", 2017);
         listaTitulos.add(pelicula);
         listaTitulos.add(matrix);
         listaTitulos.add(encanto);
         listaTitulos.add(lost);
         listaTitulos.add(casaDragon);
+        listaTitulos.add(otra);
+        listaTitulos.add(serie);
         encanto.evalua(9);
         pelicula.evalua(10);
-        matrix.evalua(4);
+        matrix.evalua(6);
         for (Titulo titulo: listaTitulos) {
             System.out.println(titulo.toString());
             if(titulo instanceof Pelicula objPelicula && objPelicula.getClasificacion()>2){
                 System.out.println(objPelicula.getClasificacion());
             }
         }
-        Pelicula p1 = pelicula;
-        p1.setNombre("XD");
-        System.out.println(pelicula.getNombre());
-        System.out.println(p1.getNombre());
+//        Pelicula p1 = pelicula;
+//        p1.setNombre("XD");
+//        System.out.println(pelicula.getNombre());
+//        System.out.println(p1.getNombre());
     }
 }
