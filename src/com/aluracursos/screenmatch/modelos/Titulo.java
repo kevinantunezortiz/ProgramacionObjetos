@@ -12,6 +12,11 @@ public class Titulo {
         this.nombre = nombre;
     }
 
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+
     public void muestraFichaTecnica(){
         System.out.println("El nombre de la Pelicula es: "+nombre);
         System.out.println("su fecha de lanzamiento es: "+fechaDeLanzamiento);

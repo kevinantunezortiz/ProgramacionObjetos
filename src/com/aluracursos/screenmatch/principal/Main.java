@@ -1,3 +1,5 @@
+package com.aluracursos.screenmatch.principal;
+
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Episodio;
@@ -6,8 +8,7 @@ import com.aluracursos.screenmatch.modelos.Serie;
 
 public class Main {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula("Encanto");
-        miPelicula.setFechaDeLanzamiento(2021);
+        Pelicula miPelicula = new Pelicula("Encanto",2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
         miPelicula.evalua(10);
@@ -18,16 +19,15 @@ public class Main {
         System.out.println(miPelicula.getNumeroDeEvaluaciones());
         System.out.println(miPelicula.calculaMedia());
 
-        Serie casaDragon = new Serie("La Casa del Dragon");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("La Casa del Dragon",2022);
+
         casaDragon.setTemporadas(2);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula("Matrix");
-        otraPelicula.setFechaDeLanzamiento(1999);
+        Pelicula otraPelicula = new Pelicula("Matrix",1999);
         otraPelicula.setDuracionEnMinutos(180);
 
         CalculadoraDeTiempo calculadoraDeTiempo = new CalculadoraDeTiempo();

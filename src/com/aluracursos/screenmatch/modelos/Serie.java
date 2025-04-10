@@ -3,10 +3,9 @@ package com.aluracursos.screenmatch.modelos;
 public class Serie extends Titulo {
     private int temporadas,episodiosPorTemporada, minutosPorEpisodio;
 
-    public Serie(String nombre) {
-        super(nombre);
+    public Serie(String nombre,int fechaDeLanzamiento) {
+        super(nombre,fechaDeLanzamiento);
     }
-
     public int getTemporadas() {
         return temporadas;
     }
@@ -34,5 +33,9 @@ public class Serie extends Titulo {
     @Override
     public int getDuracionEnMinutos() {
         return minutosPorEpisodio* temporadas * episodiosPorTemporada;
+    }
+    @Override
+    public String toString() {
+        return "Serie: "+getNombre()+" ("+getFechaDeLanzamiento()+")";
     }
 }
