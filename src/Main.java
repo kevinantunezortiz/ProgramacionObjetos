@@ -6,8 +6,7 @@ import com.aluracursos.screenmatch.modelos.Serie;
 
 public class Main {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
+        Pelicula miPelicula = new Pelicula("Encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
@@ -19,8 +18,7 @@ public class Main {
         System.out.println(miPelicula.getNumeroDeEvaluaciones());
         System.out.println(miPelicula.calculaMedia());
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("La Casa del Dragon");
+        Serie casaDragon = new Serie("La Casa del Dragon");
         casaDragon.setFechaDeLanzamiento(2022);
         casaDragon.setTemporadas(2);
         casaDragon.setMinutosPorEpisodio(50);
@@ -28,8 +26,7 @@ public class Main {
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Matrix");
+        Pelicula otraPelicula = new Pelicula("Matrix");
         otraPelicula.setFechaDeLanzamiento(1999);
         otraPelicula.setDuracionEnMinutos(180);
 
@@ -50,5 +47,7 @@ public class Main {
         episodio.setTotalVisualizaciones(300);
         System.out.println(episodio.getClasificacion());
         filtroRecomendacion.filtro(episodio);
+
+
     }
 }

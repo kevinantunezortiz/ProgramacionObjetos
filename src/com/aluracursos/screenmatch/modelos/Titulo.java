@@ -7,6 +7,11 @@ public class Titulo {
     private boolean incluidoEnElPlan;
     private double sumaDeLasEvaluaciones;
     private int numeroDeEvaluaciones;
+
+    public Titulo(String nombre) {
+        this.nombre = nombre;
+    }
+
     public void muestraFichaTecnica(){
         System.out.println("El nombre de la Pelicula es: "+nombre);
         System.out.println("su fecha de lanzamiento es: "+fechaDeLanzamiento);
