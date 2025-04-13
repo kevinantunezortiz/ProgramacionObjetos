@@ -9,6 +9,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -42,6 +43,9 @@ public class PrincipalConBusqueda {
             System.out.println(tituloOmdb.toString());
             Titulo titulo = new Titulo(tituloOmdb);
             System.out.println(titulo.toString());
+            FileWriter escritura = new FileWriter("Peliculas.txt",true);
+            escritura.write(titulo.toString()+"\n");
+            escritura.close();
         }catch (NumberFormatException e){
             System.out.println("Ocurrio un error:");
             System.out.println(e.getMessage());
@@ -53,6 +57,5 @@ public class PrincipalConBusqueda {
             System.out.println("Ocurrio una excepcion inesperada: "+e.getMessage());
         }
         System.out.println("Finalizo la ejecución del Programa");
-
     }
 }

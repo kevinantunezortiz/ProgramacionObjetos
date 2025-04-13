@@ -1,0 +1,4 @@
+Titulo{nombre='Encanto', fechaDeLanzamiento=2021, duracionEnMinutos=102}
+Titulo{nombre='Matrix', fechaDeLanzamiento=1993, duracionEnMinutos=60}
+Titulo{nombre='Top Gun', fechaDeLanzamiento=1986, duracionEnMinutos=109}
+Titulo{nombre='Encantada', fechaDeLanzamiento=2008, duracionEnMinutos=13}
